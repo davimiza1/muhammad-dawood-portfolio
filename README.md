@@ -1,5 +1,7 @@
 # Muhammad Dawood - Web Development & AI Automation Portfolio
 
+[![CI](https://github.com/davimiza1/muhammad-dawood-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/davimiza1/muhammad-dawood-portfolio/actions/workflows/ci.yml)
+
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-Visit-c9f25b?style=for-the-badge&labelColor=122118)](https://muhammad-dawood-portfolio.vercel.app)
 [![GitHub Profile](https://img.shields.io/badge/GitHub-davimiza1-ffffff?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=122118)](https://github.com/davimiza1)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Muhammad_Dawood-ffffff?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=174e3a)](https://linkedin.com/in/muhammad-dawood-03b307274)
