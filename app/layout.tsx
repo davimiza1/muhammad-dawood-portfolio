@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const base = new URL(`${protocol}://${host}`);
+export function generateMetadata(): Metadata {
+  const base = new URL("https://muhammad-dawood-portfolio.vercel.app");
   const title = "Muhammad Dawood | Web Developer & AI Automation Specialist";
-  const description = "Portfolio of Muhammad Dawood—web developer, WordPress engineer, and AI automation specialist building production applications and CRM workflows.";
+  const description = "Muhammad Dawood builds polished web products, WordPress platforms, AI workflows, and CRM automations that move businesses forward.";
   return {
     metadataBase: base,
     title,

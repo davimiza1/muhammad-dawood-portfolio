@@ -5,17 +5,50 @@ import { useState } from "react";
 const projects = [
   {
     number: "01",
+    type: "AI PRODUCT",
+    title: "SupportFlow AI",
+    description: "An AI-powered customer support command center that helps teams triage conversations, understand service health, and move high-priority issues forward.",
+    features: ["Unified support queue", "AI-assisted workflows", "Service analytics", "Responsive product UI"],
+    stack: ["Next.js", "React", "TypeScript", "Vercel"],
+    live: "https://supportflow-ai-psi.vercel.app",
+    github: "https://github.com/davimiza1/supportflow-ai",
+    visual: "supportflow",
+  },
+  {
+    number: "02",
+    type: "PRODUCTIVITY SAAS",
+    title: "Flowboard",
+    description: "A focused project workspace for planning, tracking, and shipping work through a responsive Kanban experience with live filtering and clear progress signals.",
+    features: ["Kanban task board", "Live project filters", "Progress metrics", "Accessible task creation"],
+    stack: ["Next.js", "TypeScript", "React", "Vercel"],
+    live: "https://flowboard-saas.vercel.app",
+    github: "https://github.com/davimiza1/flowboard-saas",
+    visual: "flowboard",
+  },
+  {
+    number: "03",
+    type: "OPERATIONS PLATFORM",
+    title: "Workshop Desk",
+    description: "A workshop operations demo that connects job cards, customers, vehicles, payments, invoices, and service reminders in one practical workspace.",
+    features: ["Job card workflow", "Customer & vehicle records", "Invoices & payments", "Service reminders"],
+    stack: ["JavaScript", "Operations UX", "Responsive UI", "Vercel"],
+    live: "https://workshop-desk-demo.vercel.app",
+    github: "https://github.com/davimiza1/workshop-desk-demo",
+    visual: "workshop",
+  },
+  {
+    number: "04",
     type: "FLAGSHIP SAAS",
     title: "LeadIQ AI",
     description: "A secure real-estate lead intelligence workspace that scores purchase intent, classifies opportunities, and turns spreadsheet data into an actionable sales pipeline.",
-    features: ["Supabase authentication", "Persistent user-scoped leads", "Validated CSV import", "Scoring & analytics"],
+    features: ["Supabase authentication", "User-scoped lead data", "Validated CSV import", "Scoring & analytics"],
     stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
     live: "https://leadiq-ai-xtiz-pearl.vercel.app",
     github: "https://github.com/davimiza1/leadiq-ai",
     visual: "leadiq",
   },
   {
-    number: "02",
+    number: "05",
     type: "CRM AUTOMATION",
     title: "AI Lead Qualification",
     description: "A secure TypeScript service that receives WordPress leads, verifies webhooks, explains each score, synchronizes GoHighLevel, and protects the workflow from duplicates.",
@@ -23,28 +56,6 @@ const projects = [
     stack: ["TypeScript", "GoHighLevel", "REST APIs", "Docker"],
     github: "https://github.com/davimiza1/ai-lead-qualification-ghl",
     visual: "automation",
-  },
-  {
-    number: "03",
-    type: "AI PRODUCT",
-    title: "SupportPilot AI",
-    description: "An interactive support workspace with searchable tickets, priority workflows, contextual AI reply drafts, internal notes, and server-backed demo actions.",
-    features: ["Ticket workflows", "AI-assisted replies", "Customer context", "Server actions"],
-    stack: ["Next.js", "React", "TypeScript", "Vercel"],
-    live: "https://supportpilot-ai-chi.vercel.app",
-    github: "https://github.com/davimiza1/supportpilot-ai",
-    visual: "support",
-  },
-  {
-    number: "04",
-    type: "DATA EXPERIENCE",
-    title: "CommercePulse",
-    description: "A responsive e-commerce analytics dashboard for revenue, orders, customers, products, sales channels, and inventory health.",
-    features: ["Interactive reporting", "Inventory alerts", "Product filtering", "Responsive dark mode"],
-    stack: ["Next.js", "TypeScript", "Recharts", "Vercel"],
-    live: "https://commerce-pulse.vercel.app",
-    github: "https://github.com/davimiza1/commerce-pulse",
-    visual: "commerce",
   },
 ];
 
@@ -79,7 +90,7 @@ export default function Home() {
           <p className="hero-summary">Web developer and AI automation specialist creating polished digital products, dependable WordPress platforms, and practical CRM workflows.</p>
           <div className="hero-actions">
             <a className="primary-action" href="#work">Explore selected work <span>↘</span></a>
-            <a className="text-action" href="mailto:muhammad.dawood1006@gmail.com">Start a conversation <span>→</span></a>
+            <a className="text-action" href="mailto:dawoodbiulds@gmail.com">Start a conversation <span>→</span></a>
           </div>
         </div>
         <aside className="hero-panel" aria-label="Professional snapshot">
@@ -98,6 +109,13 @@ export default function Home() {
         <span>WORDPRESS ENGINEERING</span><i>✦</i><span>FULL-STACK PRODUCTS</span><i>✦</i><span>CRM AUTOMATION</span><i>✦</i><span>AI WORKFLOWS</span><i>✦</i><span>PRODUCTION DELIVERY</span>
       </section>
 
+      <section className="signal-bar" aria-label="Portfolio highlights">
+        <div><strong>13</strong><span>Public repositories</span></div>
+        <div><strong>6</strong><span>Live product demos</span></div>
+        <div><strong>4+</strong><span>Years building</span></div>
+        <a href="https://github.com/davimiza1" target="_blank" rel="noreferrer"><span>Latest work on</span><strong>GitHub ↗</strong></a>
+      </section>
+
       <section className="section-shell work-section" id="work">
         <div className="section-heading">
           <div><p className="kicker">SELECTED WORK</p><h2>Projects built to<br />solve real problems.</h2></div>
@@ -109,10 +127,11 @@ export default function Home() {
             <article className="project" key={project.title}>
               <div className={`project-visual ${project.visual}`} aria-hidden="true">
                 <span className="project-number">{project.number}</span>
+                {project.visual === "supportflow" && <div className="supportflow-ui"><div><span>Support health</span><b>92%</b></div><strong>18 conversations</strong><p><i /> Priority queue is under control</p><small>AI triage active</small></div>}
+                {project.visual === "flowboard" && <div className="board-ui"><span>FLOWBOARD / SPRINT 08</span><div><i><b>To do</b><small>Research billing flow</small></i><i><b>In progress</b><small>Build project overview</small></i><i><b>Done</b><small>Ship responsive nav</small></i></div></div>}
+                {project.visual === "workshop" && <div className="workshop-ui"><span>JOB CARD #1048</span><strong>Toyota Corolla</strong><p>Brake inspection · Oil service</p><div><small>In progress</small><b>PKR 18,500</b></div></div>}
                 {project.visual === "leadiq" && <div className="ui-card"><p>Lead intelligence</p><strong>94</strong><span>HOT LEAD</span><i><b /></i><small>Ready to book a viewing</small></div>}
                 {project.visual === "automation" && <div className="flow"><span>WordPress</span><i>→</i><span>Secure webhook</span><i>→</i><span>GoHighLevel</span></div>}
-                {project.visual === "support" && <div className="support-ui"><span>Priority inbox</span><strong>AI reply ready</strong><p>Grounded response · 96% confidence</p><button>Send reply</button></div>}
-                {project.visual === "commerce" && <div className="chart-ui"><span>Revenue overview</span><strong>$128.4K</strong><div><i /><i /><i /><i /><i /><i /><i /></div></div>}
               </div>
               <div className="project-copy">
                 <p className="project-type">{project.type}</p>
@@ -156,7 +175,7 @@ export default function Home() {
         <div className="contact-label"><span>LET&apos;S WORK TOGETHER</span><i /></div>
         <h2>Have a project that needs<br /><em>clarity and momentum?</em></h2>
         <p>Tell me what you are building, where the process is stuck, or what needs to be automated.</p>
-        <a href="mailto:muhammad.dawood1006@gmail.com">muhammad.dawood1006@gmail.com <span>↗</span></a>
+        <a href="mailto:dawoodbiulds@gmail.com">dawoodbiulds@gmail.com <span>↗</span></a>
         <footer><div className="wordmark inverse"><span>MD</span><b>Muhammad Dawood</b></div><div><a href="https://github.com/davimiza1" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/muhammad-dawood-03b307274" target="_blank" rel="noreferrer">LinkedIn</a><a href="/muhammad-dawood-cv.pdf" download>Download CV</a></div><small>© 2026 Muhammad Dawood</small></footer>
       </section>
     </main>
