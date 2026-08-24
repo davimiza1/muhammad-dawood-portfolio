@@ -5,6 +5,17 @@ import { useState } from "react";
 const projects = [
   {
     number: "01",
+    type: "CRM AUTOMATION",
+    title: "Dental Lead-to-Patient System",
+    description: "A complete GoHighLevel acquisition system that captures dental leads, qualifies replies, routes prospects to consultation booking, and follows up safely when no response arrives.",
+    features: ["Eight-stage patient pipeline", "Reply & timeout branching", "Consultation calendar", "Two-step conversion funnel"],
+    stack: ["GoHighLevel", "CRM Architecture", "SMS Automation", "Funnels"],
+    live: "https://sites.leadconnectorhq.com/preview/oeJ6Wx9hXhrOwmxk936R?notrack=true",
+    github: "https://github.com/davimiza1/ghl-dental-lead-to-patient-system",
+    visual: "dental",
+  },
+  {
+    number: "02",
     type: "AI PRODUCT",
     title: "SupportFlow AI",
     description: "An AI-powered customer support command center that helps teams triage conversations, understand service health, and move high-priority issues forward.",
@@ -15,7 +26,7 @@ const projects = [
     visual: "supportflow",
   },
   {
-    number: "02",
+    number: "03",
     type: "PRODUCTIVITY SAAS",
     title: "Flowboard",
     description: "A focused project workspace for planning, tracking, and shipping work through a responsive Kanban experience with live filtering and clear progress signals.",
@@ -26,7 +37,7 @@ const projects = [
     visual: "flowboard",
   },
   {
-    number: "03",
+    number: "04",
     type: "OPERATIONS PLATFORM",
     title: "Workshop Desk",
     description: "A workshop operations demo that connects job cards, customers, vehicles, payments, invoices, and service reminders in one practical workspace.",
@@ -37,7 +48,7 @@ const projects = [
     visual: "workshop",
   },
   {
-    number: "04",
+    number: "05",
     type: "FLAGSHIP SAAS",
     title: "LeadIQ AI",
     description: "A secure real-estate lead intelligence workspace that scores purchase intent, classifies opportunities, and turns spreadsheet data into an actionable sales pipeline.",
@@ -46,16 +57,6 @@ const projects = [
     live: "https://leadiq-ai-xtiz-pearl.vercel.app",
     github: "https://github.com/davimiza1/leadiq-ai",
     visual: "leadiq",
-  },
-  {
-    number: "05",
-    type: "CRM AUTOMATION",
-    title: "AI Lead Qualification",
-    description: "A secure TypeScript service that receives WordPress leads, verifies webhooks, explains each score, synchronizes GoHighLevel, and protects the workflow from duplicates.",
-    features: ["HMAC verification", "Schema validation", "GHL contact upsert", "Idempotency & audit logs"],
-    stack: ["TypeScript", "GoHighLevel", "REST APIs", "Docker"],
-    github: "https://github.com/davimiza1/ai-lead-qualification-ghl",
-    visual: "automation",
   },
 ];
 
@@ -110,8 +111,8 @@ export default function Home() {
       </section>
 
       <section className="signal-bar" aria-label="Portfolio highlights">
-        <div><strong>13</strong><span>Public repositories</span></div>
-        <div><strong>6</strong><span>Live product demos</span></div>
+        <div><strong>14</strong><span>Public repositories</span></div>
+        <div><strong>7</strong><span>Live product demos</span></div>
         <div><strong>4+</strong><span>Years building</span></div>
         <a href="https://github.com/davimiza1" target="_blank" rel="noreferrer"><span>Latest work on</span><strong>GitHub ↗</strong></a>
       </section>
@@ -127,6 +128,7 @@ export default function Home() {
             <article className="project" key={project.title}>
               <div className={`project-visual ${project.visual}`} aria-hidden="true">
                 <span className="project-number">{project.number}</span>
+                {project.visual === "dental" && <div className="dental-ui"><span>LEAD-TO-PATIENT</span><strong>Consultation booked</strong><p>New lead <i>→</i> Qualified <i>→</i> Calendar</p><div><small>8-stage pipeline</small><b>GHL</b></div></div>}
                 {project.visual === "supportflow" && <div className="supportflow-ui"><div><span>Support health</span><b>92%</b></div><strong>18 conversations</strong><p><i /> Priority queue is under control</p><small>AI triage active</small></div>}
                 {project.visual === "flowboard" && <div className="board-ui"><span>FLOWBOARD / SPRINT 08</span><div><i><b>To do</b><small>Research billing flow</small></i><i><b>In progress</b><small>Build project overview</small></i><i><b>Done</b><small>Ship responsive nav</small></i></div></div>}
                 {project.visual === "workshop" && <div className="workshop-ui"><span>JOB CARD #1048</span><strong>Toyota Corolla</strong><p>Brake inspection · Oil service</p><div><small>In progress</small><b>PKR 18,500</b></div></div>}

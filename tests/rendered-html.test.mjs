@@ -19,6 +19,7 @@ test("server-renders the professional portfolio", async () => {
   const html = await response.text();
   assert.match(html, /Muhammad Dawood \| Web Developer &amp; AI Automation Specialist/);
   assert.match(html, /I build websites/);
+  assert.match(html, /Dental Lead-to-Patient System/);
   assert.match(html, /SupportFlow AI/);
   assert.match(html, /Flowboard/);
   assert.match(html, /Workshop Desk/);
@@ -32,7 +33,8 @@ test("includes professional project and contact links", async () => {
   const html = await (await render()).text();
   assert.match(html, /github\.com\/davimiza1\/leadiq-ai/);
   assert.match(html, /leadiq-ai-xtiz-pearl\.vercel\.app/);
-  assert.match(html, /github\.com\/davimiza1\/ai-lead-qualification-ghl/);
+  assert.match(html, /github\.com\/davimiza1\/ghl-dental-lead-to-patient-system/);
+  assert.match(html, /sites\.leadconnectorhq\.com\/preview\/oeJ6Wx9hXhrOwmxk936R/);
   assert.match(html, /github\.com\/davimiza1\/supportflow-ai/);
   assert.match(html, /flowboard-saas\.vercel\.app/);
   assert.match(html, /mailto:dawoodbiulds@gmail\.com/);
