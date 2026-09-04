@@ -61,10 +61,10 @@ const projects = [
 ];
 
 const clientWork = [
+  { title: "CommerceOps Pro", category: "WooCommerce · Operations", text: "Secure plugin foundation for inventory intelligence, low-stock workflows, audit logs, protected APIs, role capabilities, automated tests, and standards-based CI.", link: "https://github.com/davimiza1/commerceops-pro" },
   { title: "Home Seekers Real Estate", category: "WordPress · Real Estate", text: "Elementor layouts, property fields, CRM inquiry architecture, responsive browsing, and performance work.", link: "https://homeseekersre.com/" },
   { title: "Himalayas Overseas Education", category: "WordPress · Education", text: "Destination-led content architecture, inquiry generation, credibility content, and on-page SEO.", link: "https://himalayaseducation.pk/" },
   { title: "WordPress CRM Lead Connector", category: "PHP · Integration", text: "Original plugin for secure Elementor lead delivery with HMAC signing, retries, safe requests, and private logs.", link: "https://github.com/davimiza1/wordpress-crm-lead-connector" },
-  { title: "Elevate Business Pro", category: "WordPress · Theme Engineering", text: "Original hybrid theme with Elementor support, Gutenberg patterns, design controls, and accessible navigation.", link: "https://github.com/davimiza1/wordpress-business-block-theme" },
 ];
 
 export default function Home() {
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       <section className="signal-bar" aria-label="Portfolio highlights">
-        <div><strong>14</strong><span>Public repositories</span></div>
+        <div><strong>15</strong><span>Public repositories</span></div>
         <div><strong>7</strong><span>Live product demos</span></div>
         <div><strong>4+</strong><span>Years building</span></div>
         <a href="https://github.com/davimiza1" target="_blank" rel="noreferrer"><span>Latest work on</span><strong>GitHub ↗</strong></a>
