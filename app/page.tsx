@@ -5,6 +5,17 @@ import { useState } from "react";
 const projects = [
   {
     number: "01",
+    type: "SHOPIFY STOREFRONT",
+    title: "Aster & Vale",
+    description: "An editorial Shopify 2.0 jewelry storefront with original brand direction, responsive commerce templates, a complete product catalog, and polished customer-care journeys.",
+    features: ["Custom Liquid theme", "Variant-aware products", "Responsive collection UX", "Theme Check: 0 errors"],
+    stack: ["Shopify 2.0", "Liquid", "JavaScript", "Theme Check"],
+    live: "https://aster-vale-demo.myshopify.com/",
+    github: "https://github.com/davimiza1/aster-vale-shopify-theme",
+    visual: "aster",
+  },
+  {
+    number: "02",
     type: "CRM AUTOMATION",
     title: "Dental Lead-to-Patient System",
     description: "A complete GoHighLevel acquisition system that captures dental leads, qualifies replies, routes prospects to consultation booking, and follows up safely when no response arrives.",
@@ -15,7 +26,7 @@ const projects = [
     visual: "dental",
   },
   {
-    number: "02",
+    number: "03",
     type: "AI PRODUCT",
     title: "SupportFlow AI",
     description: "An AI-powered customer support command center that helps teams triage conversations, understand service health, and move high-priority issues forward.",
@@ -26,7 +37,7 @@ const projects = [
     visual: "supportflow",
   },
   {
-    number: "03",
+    number: "04",
     type: "PRODUCTIVITY SAAS",
     title: "Flowboard",
     description: "A focused project workspace for planning, tracking, and shipping work through a responsive Kanban experience with live filtering and clear progress signals.",
@@ -35,17 +46,6 @@ const projects = [
     live: "https://flowboard-saas.vercel.app",
     github: "https://github.com/davimiza1/flowboard-saas",
     visual: "flowboard",
-  },
-  {
-    number: "04",
-    type: "OPERATIONS PLATFORM",
-    title: "Workshop Desk",
-    description: "A workshop operations demo that connects job cards, customers, vehicles, payments, invoices, and service reminders in one practical workspace.",
-    features: ["Job card workflow", "Customer & vehicle records", "Invoices & payments", "Service reminders"],
-    stack: ["JavaScript", "Operations UX", "Responsive UI", "Vercel"],
-    live: "https://workshop-desk-demo.vercel.app",
-    github: "https://github.com/davimiza1/workshop-desk-demo",
-    visual: "workshop",
   },
   {
     number: "05",
@@ -61,6 +61,7 @@ const projects = [
 ];
 
 const clientWork = [
+  { title: "Velmora Skin", category: "Shopify · Skincare", text: "Custom Online Store 2.0 experience with responsive home, collection, and product templates, coordinated catalog visuals, native cart integration, and mobile purchase controls.", link: "https://github.com/davimiza1/velmora-skin-shopify-theme" },
   { title: "CommerceOps Pro", category: "WooCommerce · Operations", text: "Secure plugin foundation for inventory intelligence, low-stock workflows, audit logs, protected APIs, role capabilities, automated tests, and standards-based CI.", link: "https://github.com/davimiza1/commerceops-pro" },
   { title: "Home Seekers Real Estate", category: "WordPress · Real Estate", text: "Elementor layouts, property fields, CRM inquiry architecture, responsive browsing, and performance work.", link: "https://homeseekersre.com/" },
   { title: "Himalayas Overseas Education", category: "WordPress · Education", text: "Destination-led content architecture, inquiry generation, credibility content, and on-page SEO.", link: "https://himalayaseducation.pk/" },
@@ -107,12 +108,12 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Core capabilities">
-        <span>WORDPRESS ENGINEERING</span><i>✦</i><span>FULL-STACK PRODUCTS</span><i>✦</i><span>CRM AUTOMATION</span><i>✦</i><span>AI WORKFLOWS</span><i>✦</i><span>PRODUCTION DELIVERY</span>
+        <span>SHOPIFY STOREFRONTS</span><i>✦</i><span>WORDPRESS ENGINEERING</span><i>✦</i><span>FULL-STACK PRODUCTS</span><i>✦</i><span>CRM AUTOMATION</span><i>✦</i><span>AI WORKFLOWS</span>
       </section>
 
       <section className="signal-bar" aria-label="Portfolio highlights">
-        <div><strong>15</strong><span>Public repositories</span></div>
-        <div><strong>7</strong><span>Live product demos</span></div>
+        <div><strong>17</strong><span>Public repositories</span></div>
+        <div><strong>8</strong><span>Live product demos</span></div>
         <div><strong>4+</strong><span>Years building</span></div>
         <a href="https://github.com/davimiza1" target="_blank" rel="noreferrer"><span>Latest work on</span><strong>GitHub ↗</strong></a>
       </section>
@@ -126,8 +127,9 @@ export default function Home() {
         <div className="project-list">
           {projects.map((project) => (
             <article className="project" key={project.title}>
-              <div className={`project-visual ${project.visual}`} aria-hidden="true">
+              <div className={`project-visual ${project.visual}`} aria-hidden={project.visual !== "aster"}>
                 <span className="project-number">{project.number}</span>
+                {project.visual === "aster" && <img src="https://raw.githubusercontent.com/davimiza1/aster-vale-shopify-theme/main/portfolio/screenshots/homepage-desktop.png" alt="Aster & Vale Shopify jewelry storefront homepage" />}
                 {project.visual === "dental" && <div className="dental-ui"><span>LEAD-TO-PATIENT</span><strong>Consultation booked</strong><p>New lead <i>→</i> Qualified <i>→</i> Calendar</p><div><small>8-stage pipeline</small><b>GHL</b></div></div>}
                 {project.visual === "supportflow" && <div className="supportflow-ui"><div><span>Support health</span><b>92%</b></div><strong>18 conversations</strong><p><i /> Priority queue is under control</p><small>AI triage active</small></div>}
                 {project.visual === "flowboard" && <div className="board-ui"><span>FLOWBOARD / SPRINT 08</span><div><i><b>To do</b><small>Research billing flow</small></i><i><b>In progress</b><small>Build project overview</small></i><i><b>Done</b><small>Ship responsive nav</small></i></div></div>}
@@ -155,14 +157,14 @@ export default function Home() {
           <div className="expertise-grid">
             <article><span>01</span><h3>Web products</h3><p>Responsive React and Next.js applications with clear interfaces, practical interactions, APIs, authentication, and deployment.</p><small>React · Next.js · TypeScript · Supabase</small></article>
             <article><span>02</span><h3>AI automation</h3><p>Lead scoring, data validation, AI-assisted responses, CRM synchronization, workflow safeguards, and human review.</p><small>GoHighLevel · n8n · REST APIs · Webhooks</small></article>
-            <article><span>03</span><h3>WordPress engineering</h3><p>Business websites, WooCommerce, custom themes and plugins, forms, performance, migrations, and ongoing production support.</p><small>PHP · Elementor · Gutenberg · WooCommerce</small></article>
+            <article><span>03</span><h3>Commerce engineering</h3><p>Shopify and WooCommerce storefronts, custom themes and plugins, product experiences, performance, and production support.</p><small>Liquid · Shopify 2.0 · PHP · WooCommerce</small></article>
             <article><span>04</span><h3>Launch & delivery</h3><p>Requirements, implementation, testing, source control, hosting, DNS, SSL, troubleshooting, documentation, and handoff.</p><small>GitHub · Vercel · Cloudflare · cPanel</small></article>
           </div>
         </div>
       </section>
 
       <section className="section-shell client-section" id="experience">
-        <div className="section-heading compact"><div><p className="kicker">CLIENT & WORDPRESS WORK</p><h2>Commercial experience,<br />not just concepts.</h2></div><p>Selected platforms and original engineering work across real estate, education, technology, and service businesses.</p></div>
+        <div className="section-heading compact"><div><p className="kicker">COMMERCE & CLIENT WORK</p><h2>Commercial experience,<br />not just concepts.</h2></div><p>Selected Shopify, WooCommerce, WordPress, real-estate, education, and service-business work.</p></div>
         <div className="client-grid">
           {clientWork.map((item, index) => <a href={item.link} target="_blank" rel="noreferrer" key={item.title}><span>0{index + 1}</span><p>{item.category}</p><h3>{item.title}</h3><small>{item.text}</small><b>View project ↗</b></a>)}
         </div>

@@ -19,12 +19,13 @@ test("server-renders the professional portfolio", async () => {
   const html = await response.text();
   assert.match(html, /Muhammad Dawood \| Web Developer &amp; AI Automation Specialist/);
   assert.match(html, /I build websites/);
+  assert.match(html, /Aster &amp; Vale/);
   assert.match(html, /Dental Lead-to-Patient System/);
   assert.match(html, /SupportFlow AI/);
   assert.match(html, /Flowboard/);
-  assert.match(html, /Workshop Desk/);
   assert.match(html, /LeadIQ AI/);
   assert.match(html, /CommerceOps Pro/);
+  assert.match(html, /Velmora Skin/);
   assert.match(html, /muhammad-dawood-cv\.pdf/);
   assert.match(html, /og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
@@ -38,6 +39,9 @@ test("includes professional project and contact links", async () => {
   assert.match(html, /sites\.leadconnectorhq\.com\/preview\/oeJ6Wx9hXhrOwmxk936R/);
   assert.match(html, /github\.com\/davimiza1\/supportflow-ai/);
   assert.match(html, /github\.com\/davimiza1\/commerceops-pro/);
+  assert.match(html, /github\.com\/davimiza1\/aster-vale-shopify-theme/);
+  assert.match(html, /github\.com\/davimiza1\/velmora-skin-shopify-theme/);
+  assert.match(html, /aster-vale-demo\.myshopify\.com/);
   assert.match(html, /flowboard-saas\.vercel\.app/);
   assert.match(html, /mailto:dawoodbiulds@gmail\.com/);
   assert.match(html, /linkedin\.com\/in\/muhammad-dawood-03b307274/);
