@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       <section className="signal-bar" aria-label="Portfolio highlights">
-        <div><strong>17</strong><span>Public repositories</span></div>
+        <div><strong>18</strong><span>Public repositories</span></div>
         <div><strong>8</strong><span>Live product demos</span></div>
         <div><strong>4+</strong><span>Years building</span></div>
         <a href="https://github.com/davimiza1" target="_blank" rel="noreferrer"><span>Latest work on</span><strong>GitHub ↗</strong></a>
