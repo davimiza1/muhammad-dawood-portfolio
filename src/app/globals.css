@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-void: #08080d;
+  --color-panel: #101018;
+  --color-panel-2: #15151f;
+  --color-violet: #7c5cff;
+  --color-violet-light: #a794ff;
+  --color-mint: #6ee7c9;
+  --color-text: #f2f1f7;
+  --color-text-dim: #8a8a9c;
+  --color-line: rgba(242, 241, 247, 0.09);
+
+  --font-display: var(--font-space), "Segoe UI", sans-serif;
+  --font-body: var(--font-inter), "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+}
+
+:root {
+  --grid: rgba(124, 92, 255, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-cursor-active,
+.custom-cursor-active * {
+  cursor: none !important;
+}
+
+body {
+  margin: 0;
+  background: var(--color-void);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 52px 52px;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2a40;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-violet);
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, var(--color-violet-light), var(--color-violet) 55%, var(--color-mint));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--color-violet-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--color-violet-light);
+    display: inline-block;
+  }
+
+  .card {
+    position: relative;
+    background: rgba(21, 21, 31, 0.6);
+    border: 1px solid var(--color-line);
+    backdrop-filter: blur(18px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 16px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-solid {
+    background: var(--color-panel);
+    border: 1px solid var(--color-line);
+  }
+
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, var(--color-violet-light), var(--color-violet) 65%);
+    color: #0a0812;
+    font-weight: 700;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 10px 34px rgba(124, 92, 255, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--color-line);
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-violet-light);
+    background: rgba(124, 92, 255, 0.08);
+  }
+
+  .hover-lift {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    border-color: rgba(124, 92, 255, 0.4);
+  }
+
+  .glow-orb {
+    position: relative;
+    border-radius: 9999px;
+    background: radial-gradient(circle at 30% 25%, rgba(124, 92, 255, 0.28), rgba(124, 92, 255, 0.02) 70%);
+    border: 1px solid var(--color-line);
+  }
+
+  .badge-pulse {
+    animation: badge-pulse 2.4s ease-in-out infinite;
+  }
+
+  .blink {
+    animation: blink 1s step-end infinite;
+  }
+}
+
+@keyframes badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124, 92, 255, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(124, 92, 255, 0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
