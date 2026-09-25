@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, GitFork, MapPin, Download } from "lucide-react";
+import { Mail, GitFork, MapPin, Download, Briefcase } from "lucide-react";
 import Reveal from "./Reveal";
 import { BRAND } from "@/data/content";
 
@@ -40,6 +40,12 @@ export default function CtaFooter() {
                   <GitFork size={17} />
                 </span>
                 github.com/davimiza1
+              </a>
+              <a href={BRAND.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-text transition-colors">
+                <span className="w-10 h-10 rounded-xl glow-orb flex items-center justify-center text-violet-light">
+                  <Briefcase size={17} />
+                </span>
+                LinkedIn
               </a>
               <div className="flex items-center gap-3">
                 <span className="w-10 h-10 rounded-xl glow-orb flex items-center justify-center text-violet-light">

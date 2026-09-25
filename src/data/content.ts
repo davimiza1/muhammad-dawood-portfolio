@@ -19,6 +19,7 @@ export const BRAND = {
   email: "dawoodbiulds@gmail.com",
   github: "https://github.com/davimiza1",
   cv: "/muhammad-dawood-cv.pdf",
+  linkedin: "https://www.linkedin.com/in/muhammad-dawood-03b307274/",
   location: "Sargodha, Pakistan · Remote",
 };
 
@@ -46,11 +47,11 @@ export const FLAGSHIP: Project = {
   title: "LeadIQ AI",
   tag: "Flagship SaaS · Real Estate",
   desc:
-    "A real-estate lead intelligence workspace that scores purchase intent from raw CSV data, classifies opportunities and turns a spreadsheet into a working sales pipeline. Built with real authentication and a real database, not a mockup.",
+    "A real-estate lead intelligence workspace that scores leads from validated CSV data, tracks sales stages, notes and tasks, and keeps every user's records private with Row Level Security. Built with real authentication and a real database, not a mockup.",
   stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
   live: "https://leadiq-ai-xtiz-pearl.vercel.app",
   github: "https://github.com/davimiza1/leadiq-ai",
-  metric: { value: "94", label: "AI lead score, live demo" },
+  metric: { value: "RLS", label: "user-scoped Postgres records" },
 };
 
 export const GITHUB_PROJECTS: Project[] = [
@@ -118,8 +119,8 @@ export const RECENT_PLATFORMS: Project[] = [
   {
     key: "tvoxel-school",
     title: "Tvoxel School Suite",
-    tag: "Client Platform · Education",
-    desc: "A school management platform pitch site: an interactive module explorer, a live parent app preview, and a rollout timeline, matched to a real client proposal.",
+    tag: "Product site · Education",
+    desc: "A product site for a school management platform: an interactive module explorer, a parent app preview and a rollout timeline, built from a real proposal.",
     stack: ["Next.js", "TypeScript", "Framer Motion"],
     live: "https://tvoxel-school-suite.vercel.app",
     metric: { value: "7", label: "interactive modules" },
@@ -127,7 +128,7 @@ export const RECENT_PLATFORMS: Project[] = [
   {
     key: "zaiqa",
     title: "Zaiqa",
-    tag: "Client Platform · Food & Delivery",
+    tag: "Product concept · Food & Delivery",
     desc: "A restaurant ordering platform with a live commission-savings calculator, a working cart and order tracker, and a synced customer-to-kitchen admin demo.",
     stack: ["Next.js", "TypeScript", "Framer Motion"],
     live: "https://zaiqa-lyart.vercel.app",
@@ -136,7 +137,7 @@ export const RECENT_PLATFORMS: Project[] = [
   {
     key: "shifa",
     title: "Shifa",
-    tag: "Client Platform · Healthcare",
+    tag: "Product concept · Healthcare",
     desc: "A clinic and hospital management pitch site: a no-show cost calculator, live appointment booking against real time slots, and a five-tab clinic dashboard.",
     stack: ["Next.js", "TypeScript", "Framer Motion"],
     live: "https://shifa-nine.vercel.app",

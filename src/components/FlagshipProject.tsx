@@ -7,8 +7,8 @@ import { FLAGSHIP } from "@/data/content";
 
 const HIGHLIGHTS = [
   { icon: FileSpreadsheet, text: "Validated CSV import turns a spreadsheet into structured leads" },
-  { icon: TrendingUp, text: "AI scoring ranks purchase intent, not just contact info" },
-  { icon: ShieldCheck, text: "Supabase auth keeps every user's lead data scoped to them" },
+  { icon: TrendingUp, text: "Lead scoring, sales stages, notes, tasks and automation rules" },
+  { icon: ShieldCheck, text: "Supabase auth + Row Level Security keep each user's data private" },
   { icon: Database, text: "Real PostgreSQL, not mock data — this is a working app" },
 ];
 
@@ -64,7 +64,7 @@ export default function FlagshipProject() {
             </div>
 
             <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="card-solid rounded-2xl p-6">
-              <p className="text-[11px] font-mono uppercase tracking-widest text-text-dim">Lead intelligence</p>
+              <p className="text-[11px] font-mono uppercase tracking-widest text-text-dim">Lead intelligence &middot; illustrative preview</p>
               <div className="mt-4 flex items-end justify-between">
                 <span className="font-display text-6xl font-bold text-gradient">94</span>
                 <span className="rounded-full bg-mint/15 text-mint text-xs font-bold px-3 py-1.5 mb-2">Hot lead</span>

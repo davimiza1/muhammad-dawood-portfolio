@@ -10,8 +10,8 @@ const LINES: { text: string; cls?: string }[] = [
   { text: "$ deploy leadiq-ai --prod" },
   { text: "✓ build passed · 0 errors", cls: "text-mint" },
   { text: "✓ database migrated (supabase)", cls: "text-mint" },
-  { text: "✓ ai scoring model warm", cls: "text-mint" },
-  { text: "→ live at leadiq-ai.vercel.app", cls: "text-violet-light" },
+  { text: "✓ row level security enabled", cls: "text-mint" },
+  { text: "→ deployed to vercel", cls: "text-violet-light" },
 ];
 
 function TerminalCard() {
@@ -92,8 +92,8 @@ export default function Hero() {
               <Sparkles size={16} />
             </span>
             <span>
-              <span className="block text-sm font-bold">AI-scored lead: 94</span>
-              <span className="block text-[11px] text-text-dim">LeadIQ AI, live demo</span>
+              <span className="block text-sm font-bold">Lead score: 94</span>
+              <span className="block text-[11px] text-text-dim">LeadIQ AI, illustrative</span>
             </span>
           </motion.div>
         </Reveal>
