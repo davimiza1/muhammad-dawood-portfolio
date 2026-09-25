@@ -1,4 +1,4 @@
-import {
+﻿import {
   Globe,
   Bot,
   ShoppingBag,
@@ -153,9 +153,10 @@ export const CAPABILITIES: { icon: LucideIcon; title: string; text: string; tool
 ];
 
 export const EXPERIENCE = [
-  { period: "2024 — Present", role: "WordPress Developer", org: "Tvoxel Technologies Pvt Ltd" },
+  { period: "2024 — Present", role: "Web Developer", org: "Tvoxel Technologies Pvt Ltd" },
   { period: "2024 — Present", role: "Web Development Instructor", org: "Bano Qabil" },
   { period: "2020 — Present", role: "Freelance Developer & Automation Builder", org: "Remote · International clients" },
 ];
 
 export { Globe, Database, Webhook, Sparkles };
+
