@@ -6,7 +6,6 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 const INTERACTIVE = "a, button, [role='button'], input, textarea, select, summary, label";
 
 export default function CustomCursor() {
-  const [enabled, setEnabled] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [pressed, setPressed] = useState(false);
 
@@ -17,7 +16,6 @@ export default function CustomCursor() {
 
   useEffect(() => {
     if (!window.matchMedia("(pointer: fine)").matches) return;
-    setEnabled(true);
     document.documentElement.classList.add("custom-cursor-active");
 
     const move = (e: MouseEvent) => {
@@ -38,8 +36,6 @@ export default function CustomCursor() {
       window.removeEventListener("mouseup", up);
     };
   }, [dotX, dotY]);
-
-  if (!enabled) return null;
 
   return (
     <>

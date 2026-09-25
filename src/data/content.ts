@@ -16,7 +16,7 @@ export const BRAND = {
   role: "Custom Web Apps, Software & AI Automation Expert",
   tagline: "I design and build the software your business runs on.",
   bio: "I build production web applications, e-commerce platforms and AI-driven automations for businesses that need more than a template. Four years in, still shipping.",
-  email: "dawoodtvoxel@gmail.com",
+  email: "dawoodbiulds@gmail.com",
   github: "https://github.com/davimiza1",
   cv: "/muhammad-dawood-cv.pdf",
   location: "Sargodha, Pakistan · Remote",
@@ -25,7 +25,7 @@ export const BRAND = {
 export const STATS = [
   { value: 4, suffix: "+", label: "years building" },
   { value: 50, suffix: "+", label: "client projects" },
-  { value: 20, suffix: "+", label: "public repositories" },
+  { value: 18, suffix: "", label: "public repositories" },
   { value: 8, suffix: "+", label: "live product demos" },
 ];
 
@@ -48,7 +48,7 @@ export const FLAGSHIP: Project = {
   desc:
     "A real-estate lead intelligence workspace that scores purchase intent from raw CSV data, classifies opportunities and turns a spreadsheet into a working sales pipeline. Built with real authentication and a real database, not a mockup.",
   stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
-  live: "https://leadiq-ai.vercel.app",
+  live: "https://leadiq-ai-xtiz-pearl.vercel.app",
   github: "https://github.com/davimiza1/leadiq-ai",
   metric: { value: "94", label: "AI lead score, live demo" },
 };
@@ -60,7 +60,7 @@ export const GITHUB_PROJECTS: Project[] = [
     tag: "AI Product",
     desc: "An AI-assisted customer support command center: a unified queue, service health analytics, and drafting help for high-priority conversations.",
     stack: ["Next.js", "React", "TypeScript"],
-    live: "https://supportflow-ai.vercel.app",
+    live: "https://supportflow-ai-psi.vercel.app",
     github: "https://github.com/davimiza1/supportflow-ai",
     metric: { value: "92%", label: "support health, live demo" },
   },
@@ -70,6 +70,7 @@ export const GITHUB_PROJECTS: Project[] = [
     tag: "CRM Automation",
     desc: "A GoHighLevel acquisition workflow that captures dental leads, qualifies replies, routes prospects to a booking calendar, and follows up safely on silence.",
     stack: ["GoHighLevel", "CRM Architecture", "SMS Automation"],
+    live: "https://sites.leadconnectorhq.com/preview/oeJ6Wx9hXhrOwmxk936R?notrack=true",
     github: "https://github.com/davimiza1/ghl-dental-lead-to-patient-system",
     metric: { value: "8", label: "stage automated pipeline" },
   },
@@ -89,8 +90,27 @@ export const GITHUB_PROJECTS: Project[] = [
     tag: "Shopify Storefront",
     desc: "An editorial Shopify 2.0 jewelry storefront: original brand direction, a full custom Liquid theme, and a responsive product catalog.",
     stack: ["Shopify 2.0", "Liquid", "JavaScript"],
+    live: "https://aster-vale-demo.myshopify.com/",
     github: "https://github.com/davimiza1/aster-vale-shopify-theme",
     metric: { value: "0", label: "Theme Check errors" },
+  },
+  {
+    key: "commerceops",
+    title: "CommerceOps Pro",
+    tag: "WooCommerce Operations",
+    desc: "A secure plugin foundation for inventory intelligence, low-stock workflows, audit logs, protected APIs and role-aware store operations.",
+    stack: ["PHP", "WooCommerce", "REST API", "PHPUnit"],
+    github: "https://github.com/davimiza1/commerceops-pro",
+    metric: { value: "CI", label: "automated quality checks" },
+  },
+  {
+    key: "velmora",
+    title: "Velmora Skin",
+    tag: "Shopify Storefront",
+    desc: "A custom Shopify 2.0 skincare storefront with responsive home, collection and product templates, native cart integration and mobile purchase controls.",
+    stack: ["Shopify 2.0", "Liquid", "JavaScript"],
+    github: "https://github.com/davimiza1/velmora-skin-shopify-theme",
+    metric: { value: "3", label: "core commerce templates" },
   },
 ];
 
