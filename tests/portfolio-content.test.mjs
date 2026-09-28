@@ -6,10 +6,12 @@ const content = await readFile(new URL("../src/data/content.ts", import.meta.url
 
 test("preserves the required portfolio identity and contact details", () => {
   assert.match(content, /email: "dawoodbiulds@gmail\.com"/);
-  assert.match(content, /value: 18, suffix: "", label: "public repositories"/);
+  assert.match(content, /value: 19, suffix: "", label: "public repositories"/);
 });
 
 test("includes the strongest recent projects with verified links", () => {
+  assert.match(content, /title: "AgencyDesk"/);
+  assert.match(content, /github\.com\/davimiza1\/agencydesk/);
   assert.match(content, /title: "Dental Lead-to-Patient System"/);
   assert.match(content, /title: "Aster & Vale"/);
   assert.match(content, /title: "CommerceOps Pro"/);

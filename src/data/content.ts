@@ -26,7 +26,7 @@ export const BRAND = {
 export const STATS = [
   { value: 4, suffix: "+", label: "years building" },
   { value: 50, suffix: "+", label: "client projects" },
-  { value: 18, suffix: "", label: "public repositories" },
+  { value: 19, suffix: "", label: "public repositories" },
   { value: 8, suffix: "+", label: "live product demos" },
 ];
 
@@ -55,6 +55,15 @@ export const FLAGSHIP: Project = {
 };
 
 export const GITHUB_PROJECTS: Project[] = [
+  {
+    key: "agencydesk",
+    title: "AgencyDesk",
+    tag: "Client Portal · Agency Operations",
+    desc: "A Laravel and Livewire workspace for agencies to manage client projects, milestones, private deliverables, approvals and project conversations with role-aware access.",
+    stack: ["Laravel 13", "Livewire 4", "PHP", "SQLite"],
+    github: "https://github.com/davimiza1/agencydesk",
+    metric: { value: "3", label: "role-based portal views" },
+  },
   {
     key: "supportflow",
     title: "SupportFlow AI",
