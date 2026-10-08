@@ -26,8 +26,8 @@ export const BRAND = {
 export const STATS = [
   { value: 4, suffix: "+", label: "years building" },
   { value: 50, suffix: "+", label: "client projects" },
-  { value: 19, suffix: "", label: "public repositories" },
-  { value: 8, suffix: "+", label: "live product demos" },
+  { value: 20, suffix: "", label: "public repositories" },
+  { value: 9, suffix: "+", label: "live product demos" },
 ];
 
 export type Project = {
@@ -55,6 +55,16 @@ export const FLAGSHIP: Project = {
 };
 
 export const GITHUB_PROJECTS: Project[] = [
+  {
+    key: "orbit",
+    title: "Orbit",
+    tag: "Full-Stack Product · Project Management",
+    desc: "A production-oriented MERN workspace with responsive Kanban planning, task search and filtering, protected REST APIs, and a usable demo fallback when the database is unavailable.",
+    stack: ["React", "TypeScript", "Express", "MongoDB"],
+    live: "https://orbit-project-management.pages.dev",
+    github: "https://github.com/davimiza1/orbit-project-management",
+    metric: { value: "MERN", label: "full-stack project workspace" },
+  },
   {
     key: "agencydesk",
     title: "AgencyDesk",
