@@ -26,7 +26,7 @@ export const BRAND = {
 export const STATS = [
   { value: 4, suffix: "+", label: "years building" },
   { value: 50, suffix: "+", label: "client projects" },
-  { value: 20, suffix: "", label: "public repositories" },
+  { value: 21, suffix: "", label: "public repositories" },
   { value: 9, suffix: "+", label: "live product demos" },
 ];
 
@@ -55,6 +55,15 @@ export const FLAGSHIP: Project = {
 };
 
 export const GITHUB_PROJECTS: Project[] = [
+  {
+    key: "north-loom",
+    title: "North & Loom",
+    tag: "Full-Stack Commerce · MERN",
+    desc: "A premium homeware storefront with product discovery, category filtering, search, wishlists, persistent carts and orders, JWT authentication, and a card-free test checkout.",
+    stack: ["React", "TypeScript", "Express", "MongoDB"],
+    github: "https://github.com/davimiza1/north-and-loom",
+    metric: { value: "MERN", label: "authenticated commerce workflow" },
+  },
   {
     key: "orbit",
     title: "Orbit",
